@@ -7,7 +7,7 @@ public abstract class Servicio {
     private String direccionInstalacion;
     private String fechaInstalacion;
     private String fechaFacturacion;
-    private EstadoServicio activo;
+    private EstadoServicio estado;
 
     public Servicio(String id, String codigoContrato, String direccionInstalacion, String fechaInstalacion, String fechaFacturacion, EstadoServicio activo) {
         this.id = id;
@@ -15,7 +15,7 @@ public abstract class Servicio {
         this.direccionInstalacion = direccionInstalacion;
         this.fechaInstalacion = fechaInstalacion;
         this.fechaFacturacion = fechaFacturacion;
-        this.activo = activo;
+        this.estado = activo;
     }
 
     public String getId() {
@@ -58,12 +58,12 @@ public abstract class Servicio {
         this.fechaFacturacion = fechaFacturacion;
     }
 
-    public EstadoServicio getActivo() {
-        return activo;
+    public EstadoServicio getEstado() {
+        return estado;
     }
 
-    public void setActivo(EstadoServicio activo) {
-        this.activo = activo;
+    public void setEstado(EstadoServicio estado) {
+        this.estado = estado;
     }
 
     @Override
@@ -74,6 +74,6 @@ public abstract class Servicio {
                 ", direccionInstalacion='" + direccionInstalacion + '\'' +
                 ", fechaInstalacion='" + fechaInstalacion + '\'' +
                 ", fechaFacturacion='" + fechaFacturacion + '\'' +
-                ", activo=" + activo + '\'';
+                ", activo=" + estado + '\'';
     }
 }

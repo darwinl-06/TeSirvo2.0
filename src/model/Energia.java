@@ -6,10 +6,10 @@ public class Energia extends Servicio {
     protected int contadorActual;
     protected int contadorAnterior;
 
-    public Energia(String codigoContrato, String direccionInstalacion, String fechaInstalacion, String fechaFacturacion,
-                   EstadoServicio activo, double valorActual, double valorAnterior, String codigoMedidor, int contadorActual, int contadorAnterior) {
+    public Energia(String id, String codigoContrato, String direccionInstalacion, String fechaInstalacion,
+                   String fechaFacturacion, EstadoServicio activo, String codigoMedidor, int contadorActual, int contadorAnterior) {
 
-        super(codigoContrato, direccionInstalacion, fechaInstalacion, fechaFacturacion, activo, valorActual, valorAnterior);
+        super(id, codigoContrato, direccionInstalacion, fechaInstalacion, fechaFacturacion, activo);
         this.codigoMedidor = codigoMedidor;
         this.contadorActual = contadorActual;
         this.contadorAnterior = contadorAnterior;

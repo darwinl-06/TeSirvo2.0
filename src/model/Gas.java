@@ -6,10 +6,10 @@ public class Gas extends Servicio {
     protected int contadorActual;
     protected int contadorAnterior;
 
-    public Gas(String codigoContrato, String direccionInstalacion, String fechaInstalacion, String fechaFacturacion,
-               EstadoServicio activo, double valorActual, double valorAnterior, String codigoMedidor, int contadorActual, int contadorAnterior) {
+    public Gas(String id, String codigoContrato, String direccionInstalacion,
+               String fechaInstalacion, String fechaFacturacion, EstadoServicio activo, String codigoMedidor, int contadorActual, int contadorAnterior) {
 
-        super(codigoContrato, direccionInstalacion, fechaInstalacion, fechaFacturacion, activo, valorActual, valorAnterior);
+        super(id, codigoContrato, direccionInstalacion, fechaInstalacion, fechaFacturacion, activo);
         this.codigoMedidor = codigoMedidor;
         this.contadorActual = contadorActual;
         this.contadorAnterior = contadorAnterior;

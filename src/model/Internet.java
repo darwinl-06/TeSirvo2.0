@@ -5,10 +5,10 @@ public class Internet extends Servicio {
     protected int cantidadConsumoIncluido;
     protected int cantidadConsumoConsumido;
 
-    public Internet(String codigoContrato, String direccionInstalacion, String fechaInstalacion, String fechaFacturacion,
-                    EstadoServicio activo, double valorActual, double valorAnterior, int cantidadConsumoIncluido, int cantidadConsumoConsumido) {
+    public Internet(String id, String codigoContrato, String direccionInstalacion, String fechaInstalacion,
+                    String fechaFacturacion, EstadoServicio activo, int cantidadConsumoIncluido, int cantidadConsumoConsumido) {
 
-        super(codigoContrato, direccionInstalacion, fechaInstalacion, fechaFacturacion, activo, valorActual, valorAnterior);
+        super(id, codigoContrato, direccionInstalacion, fechaInstalacion, fechaFacturacion, activo);
         this.cantidadConsumoIncluido = cantidadConsumoIncluido;
         this.cantidadConsumoConsumido = cantidadConsumoConsumido;
     }

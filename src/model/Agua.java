@@ -6,10 +6,9 @@ public class Agua extends Servicio {
     private int contadorActual;
     private int contadorAnterior;
 
-    public Agua(String codigoContrato, String direccionInstalacion, String fechaInstalacion, String fechaFacturacion,
-                EstadoServicio activo, double valorActual, double valorAnterior, String codigoMedidor, int contadorActual, int contadorAnterior) {
-
-        super(codigoContrato, direccionInstalacion, fechaInstalacion, fechaFacturacion, activo, valorActual, valorAnterior);
+    public Agua(String id, String codigoContrato, String direccionInstalacion, String fechaInstalacion,
+                String fechaFacturacion, EstadoServicio activo, String codigoMedidor, int contadorActual, int contadorAnterior) {
+        super(id, codigoContrato, direccionInstalacion, fechaInstalacion, fechaFacturacion, activo);
         this.codigoMedidor = codigoMedidor;
         this.contadorActual = contadorActual;
         this.contadorAnterior = contadorAnterior;

@@ -2,16 +2,17 @@ package model;
 
 public class Telefonia extends Servicio {
 
-    private String tipoContrato;
+    private TipoPlan tipoContrato;
     private int minutosLocalesIncluidos;
     private int minutosLocalesConsumidos;
     private int minutosLargaDistanciaIncluidos;
     private int minutosLargaDistanciaConsumidos;
 
-    public Telefonia(String codigoContrato, String direccionInstalacion, String fechaInstalacion, String fechaFacturacion, EstadoServicio activo, double valorActual, double valorAnterior, String tipoContrato,
+    public Telefonia(String id, String codigoContrato, String direccionInstalacion, String fechaInstalacion, String fechaFacturacion, EstadoServicio activo, TipoPlan tipoContrato,
                      int minutosLocalesIncluidos, int minutosLocalesConsumidos, int minutosLargaDistanciaIncluidos, int minutosLargaDistanciaConsumidos) {
 
-        super(codigoContrato, direccionInstalacion, fechaInstalacion, fechaFacturacion, activo, valorActual, valorAnterior);
+        super(id, codigoContrato, direccionInstalacion, fechaInstalacion, fechaFacturacion, activo);
+
         this.tipoContrato = tipoContrato;
         this.minutosLocalesIncluidos = minutosLocalesIncluidos;
         this.minutosLocalesConsumidos = minutosLocalesConsumidos;
@@ -19,11 +20,11 @@ public class Telefonia extends Servicio {
         this.minutosLargaDistanciaConsumidos = minutosLargaDistanciaConsumidos;
     }
 
-    public String getTipoContrato() {
+    public TipoPlan getTipoContrato() {
         return tipoContrato;
     }
 
-    public void setTipoContrato(String tipoContrato) {
+    public void setTipoContrato(TipoPlan tipoContrato) {
         this.tipoContrato = tipoContrato;
     }
 
