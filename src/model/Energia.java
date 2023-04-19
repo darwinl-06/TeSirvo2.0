@@ -14,6 +14,9 @@ public class Energia extends ServicioPublico {
         this.contadorActual = contadorActual;
         this.contadorAnterior = contadorAnterior;
     }
+    public Energia(){
+
+    }
 
     public String getCodigoMedidor() {
         return codigoMedidor;

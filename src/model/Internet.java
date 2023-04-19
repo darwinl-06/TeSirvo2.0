@@ -13,6 +13,9 @@ public class Internet extends ServicioPublico {
         this.cantidadConsumoIncluido = cantidadConsumoIncluido;
         this.cantidadConsumoConsumido = cantidadConsumoConsumido;
     }
+    public Internet(){
+
+    }
 
     public int getCantidadConsumoIncluido() {
         return cantidadConsumoIncluido;

@@ -14,6 +14,9 @@ public class Gas extends ServicioPublico {
         this.contadorActual = contadorActual;
         this.contadorAnterior = contadorAnterior;
     }
+    public Gas(){
+
+    }
 
     public String getCodigoMedidor() {
         return codigoMedidor;

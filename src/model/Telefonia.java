@@ -18,6 +18,7 @@ public class Telefonia extends ServicioPublico {
         this.minutosLargaDistanciaIncluidos = minutosLargaDistanciaIncluidos;
         this.minutosLargaDistanciaConsumidos = minutosLargaDistanciaConsumidos;
     }
+    public Telefonia(){}
 
     public String getTipoContrato() {
         return tipoContrato;

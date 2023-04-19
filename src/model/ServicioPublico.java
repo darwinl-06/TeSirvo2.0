@@ -16,6 +16,9 @@ public abstract class ServicioPublico {
         this.fechaFacturacion = fechaFacturacion;
         this.activo = activo;
     }
+    public ServicioPublico(){
+
+    }
 
     public String getCodigoContrato() {
         return codigoContrato;

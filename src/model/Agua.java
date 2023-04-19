@@ -1,6 +1,6 @@
 package model;
 
-public class Agua extends ServicioPublico {
+public class Agua extends ServicioPublico  {
 
     private String codigoMedidor;
     private int contadorActual;
@@ -13,6 +13,10 @@ public class Agua extends ServicioPublico {
         this.codigoMedidor = codigoMedidor;
         this.contadorActual = contadorActual;
         this.contadorAnterior = contadorAnterior;
+    }
+
+    public Agua(){
+
     }
 
     public String getCodigoMedidor() {
