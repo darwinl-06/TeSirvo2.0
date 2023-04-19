@@ -5,10 +5,10 @@ import java.util.ArrayList;
 public class Contrato {
 
     private ArrayList<Servicio> services;
-    private Plan plan;
+    private PlanComercial plan;
     private String id;
 
-    public Contrato(String id, Plan plan) {
+    public Contrato(String id, PlanComercial plan) {
         this.id = id;
         this.plan = plan;
         this.services = new ArrayList<>();
@@ -58,11 +58,11 @@ public class Contrato {
         this.services = services;
     }
 
-    public Plan getPlan() {
+    public PlanComercial getPlan() {
         return plan;
     }
 
-    public void setPlan(Plan plan) {
+    public void setPlan(PlanComercial plan) {
         this.plan = plan;
     }
 

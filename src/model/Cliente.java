@@ -13,6 +13,8 @@ public class Cliente {
     private String email;
     private EstadoCliente estado;
 
+    private Contrato contrato;
+
     public Cliente(String nombre, String identificacion, String fechaRegistro, String codigoContrato, String direccionFacturacion,
                    String telefonoContacto, String email, EstadoCliente estado) {
 
@@ -88,6 +90,15 @@ public class Cliente {
 
     public void setEstado(EstadoCliente estado) {
         this.estado = estado;
+    }
+
+
+    public Contrato getContrato() {
+        return contrato;
+    }
+
+    public void setContrato(Contrato contrato) {
+        this.contrato = contrato;
     }
 
     @Override
