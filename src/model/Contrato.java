@@ -8,10 +8,6 @@ public class Contrato {
     private Plan plan;
     private String id;
 
-    /**
-     *
-     *
-     */
     public Contrato(String id, Plan plan) {
         this.id = id;
         this.plan = plan;

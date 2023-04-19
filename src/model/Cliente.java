@@ -12,10 +12,9 @@ public class Cliente {
     private String telefonoContacto;
     private String email;
     private EstadoCliente estado;
-    private List<Servicio> serviciosContratados;
 
     public Cliente(String nombre, String identificacion, String fechaRegistro, String codigoContrato, String direccionFacturacion,
-                   String telefonoContacto, String email, EstadoCliente estado, List<Servicio> serviciosContratados) {
+                   String telefonoContacto, String email, EstadoCliente estado) {
 
         this.nombre = nombre;
         this.id = identificacion;
@@ -25,7 +24,6 @@ public class Cliente {
         this.telefonoContacto = telefonoContacto;
         this.email = email;
         this.estado = estado;
-        this.serviciosContratados = serviciosContratados;
     }
 
     public String getNombre() {
@@ -92,17 +90,9 @@ public class Cliente {
         this.estado = estado;
     }
 
-    public List<Servicio> getServiciosContratados() {
-        return serviciosContratados;
-    }
-
-    public void setServiciosContratados(List<Servicio> serviciosContratados) {
-        this.serviciosContratados = serviciosContratados;
-    }
-
     @Override
     public String toString() {
-        return "Cliente{" +
+        return "Cliente" +
                 "nombre='" + nombre + '\'' +
                 ", identificacion='" + id + '\'' +
                 ", fechaRegistro='" + fechaRegistro + '\'' +
@@ -110,8 +100,6 @@ public class Cliente {
                 ", direccionFacturacion='" + direccionFacturacion + '\'' +
                 ", telefonoContacto='" + telefonoContacto + '\'' +
                 ", email='" + email + '\'' +
-                ", estado=" + estado +
-                ", serviciosContratados=" + serviciosContratados +
-                '}';
+                ", estado=" + estado ;
     }
 }
