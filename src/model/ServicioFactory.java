@@ -1,8 +1,8 @@
 package model;
 
-public class ServicioPublicoFactory {
+public class ServicioFactory {
 
-    public ServicioPublico crearServicio(String tipoServicio) {
+    public Servicio crearServicio(String tipoServicio) {
         if (tipoServicio.equalsIgnoreCase("Agua")) {
             return new Agua();
         } else if (tipoServicio.equalsIgnoreCase("Gas")) {

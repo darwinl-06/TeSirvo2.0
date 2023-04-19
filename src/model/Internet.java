@@ -1,15 +1,14 @@
 package model;
 
-public class Internet extends ServicioPublico {
+public class Internet extends Servicio {
 
     protected int cantidadConsumoIncluido;
     protected int cantidadConsumoConsumido;
 
+    public Internet(String codigoContrato, String direccionInstalacion, String fechaInstalacion, String fechaFacturacion,
+                    EstadoServicio activo, double valorActual, double valorAnterior, int cantidadConsumoIncluido, int cantidadConsumoConsumido) {
 
-    public Internet(String codigoContrato, String direccionInstalacion, String fechaInstalacion,
-                    String fechaFacturacion, EstadoServicio activo, int cantidadConsumoIncluido, int cantidadConsumoConsumido) {
-
-        super(codigoContrato, direccionInstalacion, fechaInstalacion, fechaFacturacion, activo);
+        super(codigoContrato, direccionInstalacion, fechaInstalacion, fechaFacturacion, activo, valorActual, valorAnterior);
         this.cantidadConsumoIncluido = cantidadConsumoIncluido;
         this.cantidadConsumoConsumido = cantidadConsumoConsumido;
     }
@@ -33,8 +32,7 @@ public class Internet extends ServicioPublico {
     @Override
     public String toString() {
         return "Internet{" +
-                "cantidadConsumoIncluido=" + cantidadConsumoIncluido +
-                ", cantidadConsumoConsumido=" + cantidadConsumoConsumido +
-                '}';
+                "cantidadConsumoIncluido=" + cantidadConsumoIncluido + '\''+
+                ", cantidadConsumoConsumido=" + cantidadConsumoConsumido;
     }
 }

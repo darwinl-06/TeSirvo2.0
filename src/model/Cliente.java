@@ -5,20 +5,20 @@ import java.util.List;
 public class Cliente {
 
     private String nombre;
-    private String identificacion;
+    private String id;
     private String fechaRegistro;
     private String codigoContrato;
     private String direccionFacturacion;
     private String telefonoContacto;
     private String email;
     private EstadoCliente estado;
-    private List<ServicioPublico> serviciosContratados;
+    private List<Servicio> serviciosContratados;
 
     public Cliente(String nombre, String identificacion, String fechaRegistro, String codigoContrato, String direccionFacturacion,
-                   String telefonoContacto, String email, EstadoCliente estado, List<ServicioPublico> serviciosContratados) {
+                   String telefonoContacto, String email, EstadoCliente estado, List<Servicio> serviciosContratados) {
 
         this.nombre = nombre;
-        this.identificacion = identificacion;
+        this.id = identificacion;
         this.fechaRegistro = fechaRegistro;
         this.codigoContrato = codigoContrato;
         this.direccionFacturacion = direccionFacturacion;
@@ -36,12 +36,12 @@ public class Cliente {
         this.nombre = nombre;
     }
 
-    public String getIdentificacion() {
-        return identificacion;
+    public String getId() {
+        return id;
     }
 
-    public void setIdentificacion(String identificacion) {
-        this.identificacion = identificacion;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getFechaRegistro() {
@@ -92,11 +92,11 @@ public class Cliente {
         this.estado = estado;
     }
 
-    public List<ServicioPublico> getServiciosContratados() {
+    public List<Servicio> getServiciosContratados() {
         return serviciosContratados;
     }
 
-    public void setServiciosContratados(List<ServicioPublico> serviciosContratados) {
+    public void setServiciosContratados(List<Servicio> serviciosContratados) {
         this.serviciosContratados = serviciosContratados;
     }
 
@@ -104,7 +104,7 @@ public class Cliente {
     public String toString() {
         return "Cliente{" +
                 "nombre='" + nombre + '\'' +
-                ", identificacion='" + identificacion + '\'' +
+                ", identificacion='" + id + '\'' +
                 ", fechaRegistro='" + fechaRegistro + '\'' +
                 ", codigoContrato='" + codigoContrato + '\'' +
                 ", direccionFacturacion='" + direccionFacturacion + '\'' +

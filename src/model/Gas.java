@@ -1,15 +1,15 @@
 package model;
 
-public class Gas extends ServicioPublico {
+public class Gas extends Servicio {
 
     protected String codigoMedidor;
     protected int contadorActual;
     protected int contadorAnterior;
 
     public Gas(String codigoContrato, String direccionInstalacion, String fechaInstalacion, String fechaFacturacion,
-               EstadoServicio activo, String codigoMedidor, int contadorActual, int contadorAnterior) {
+               EstadoServicio activo, double valorActual, double valorAnterior, String codigoMedidor, int contadorActual, int contadorAnterior) {
 
-        super(codigoContrato, direccionInstalacion, fechaInstalacion, fechaFacturacion, activo);
+        super(codigoContrato, direccionInstalacion, fechaInstalacion, fechaFacturacion, activo, valorActual, valorAnterior);
         this.codigoMedidor = codigoMedidor;
         this.contadorActual = contadorActual;
         this.contadorAnterior = contadorAnterior;
@@ -43,8 +43,7 @@ public class Gas extends ServicioPublico {
     public String toString() {
         return "Gas{" +
                 "codigoMedidor='" + codigoMedidor + '\'' +
-                ", contadorActual=" + contadorActual +
-                ", contadorAnterior=" + contadorAnterior +
-                '}';
+                ", contadorActual=" + contadorActual + '\'' +
+                ", contadorAnterior=" + contadorAnterior;
     }
 }

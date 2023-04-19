@@ -1,6 +1,6 @@
 package model;
 
-public class Telefonia extends ServicioPublico {
+public class Telefonia extends Servicio {
 
     private String tipoContrato;
     private int minutosLocalesIncluidos;
@@ -8,10 +8,10 @@ public class Telefonia extends ServicioPublico {
     private int minutosLargaDistanciaIncluidos;
     private int minutosLargaDistanciaConsumidos;
 
-    public Telefonia(String codigoContrato, String direccionInstalacion, String fechaInstalacion, String fechaFacturacion, EstadoServicio activo, String tipoContrato, int minutosLocalesIncluidos,
-                     int minutosLocalesConsumidos, int minutosLargaDistanciaIncluidos, int minutosLargaDistanciaConsumidos) {
+    public Telefonia(String codigoContrato, String direccionInstalacion, String fechaInstalacion, String fechaFacturacion, EstadoServicio activo, double valorActual, double valorAnterior, String tipoContrato,
+                     int minutosLocalesIncluidos, int minutosLocalesConsumidos, int minutosLargaDistanciaIncluidos, int minutosLargaDistanciaConsumidos) {
 
-        super(codigoContrato, direccionInstalacion, fechaInstalacion, fechaFacturacion, activo);
+        super(codigoContrato, direccionInstalacion, fechaInstalacion, fechaFacturacion, activo, valorActual, valorAnterior);
         this.tipoContrato = tipoContrato;
         this.minutosLocalesIncluidos = minutosLocalesIncluidos;
         this.minutosLocalesConsumidos = minutosLocalesConsumidos;
@@ -61,12 +61,11 @@ public class Telefonia extends ServicioPublico {
 
     @Override
     public String toString() {
-        return "Telefonia{" +
+        return "Telefonia" +
                 "tipoContrato='" + tipoContrato + '\'' +
-                ", minutosLocalesIncluidos=" + minutosLocalesIncluidos +
-                ", minutosLocalesConsumidos=" + minutosLocalesConsumidos +
-                ", minutosLargaDistanciaIncluidos=" + minutosLargaDistanciaIncluidos +
-                ", minutosLargaDistanciaConsumidos=" + minutosLargaDistanciaConsumidos +
-                '}';
+                ", minutosLocalesIncluidos=" + minutosLocalesIncluidos + '\''+
+                ", minutosLocalesConsumidos=" + minutosLocalesConsumidos + '\''+
+                ", minutosLargaDistanciaIncluidos=" + minutosLargaDistanciaIncluidos + '\''+
+                ", minutosLargaDistanciaConsumidos=" + minutosLargaDistanciaConsumidos;
     }
 }
