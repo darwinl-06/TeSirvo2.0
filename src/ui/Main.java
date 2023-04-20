@@ -8,6 +8,8 @@ public class Main {
     public static void main(String[] args) {
 
         ContenedoraGeneral controller = new ContenedoraGeneral();
+        PlanControler planControler= new PlanControler();
+
 
         controller.createService("1", "1", "WATER", "Sur", "20/04/2023",
                 "20/03/2023", EstadoServicio.ACTIVO, "100", 72000, 0,
@@ -17,6 +19,11 @@ public class Main {
         controller.createClient("Messi","1109114877", "01/05/2004", "123",
                 "Norte","123432","correo", EstadoCliente.POTENCIAL);
 
+
+
+        System.out.println(controller.getClients().get(0).printContract());
+        planControler.sellPlancomercial(controller.getClients().get(0),"HomeService");
+        System.out.println(controller.getClients().get(0).printContract());
 
         System.out.println("-----------------------------------------------------------------------------------------");
         Facturador facturador = new Facturador(new ConsultaClientesFac());

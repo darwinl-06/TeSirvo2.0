@@ -14,6 +14,21 @@ public class Contrato {
         this.services = new ArrayList<>();
     }
 
+    public String printContrac(){
+
+
+        String print="";
+        for (int i=0;i<services.size();i++){
+            print=print+" "+services.get(i).toString();
+        }
+
+        print=print+"\n"+plan.getName();
+
+        return print;
+    }
+
+
+
     public boolean addService(Servicio service){
         services.add(service);
         return true;

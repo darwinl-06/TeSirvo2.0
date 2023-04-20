@@ -27,6 +27,13 @@ public class Cliente {
         this.estado = estado;
     }
 
+    public String printContract(){
+
+        if (contrato==null){
+            return "no hay contrato";
+        }else
+        return contrato.printContrac();
+    }
     public String getNombre() {
         return nombre;
     }
