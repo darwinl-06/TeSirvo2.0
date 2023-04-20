@@ -12,7 +12,6 @@ public class Cliente {
     private String telefonoContacto;
     private String email;
     private EstadoCliente estado;
-
     private Contrato contrato;
 
     public Cliente(String nombre, String identificacion, String fechaRegistro, String codigoContrato, String direccionFacturacion,
@@ -91,7 +90,6 @@ public class Cliente {
     public void setEstado(EstadoCliente estado) {
         this.estado = estado;
     }
-
 
     public Contrato getContrato() {
         return contrato;

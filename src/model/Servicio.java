@@ -25,9 +25,6 @@ public abstract class Servicio {
     public void setId(String id) {
         this.id = id;
     }
-    public ServicioPublico(){
-
-    }
 
     public String getCodigoContrato() {
         return codigoContrato;

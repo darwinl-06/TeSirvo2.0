@@ -5,10 +5,7 @@ public class PlanControler {
     private IPlanComercial plan;
     private PlanContainer comertialPlan=new PlanContainer();
 
-
-
     public void sellPlancomercial(Cliente cliente,String planName) {
-
 
         if (comertialPlan.getPlan(planName)!=null){
 

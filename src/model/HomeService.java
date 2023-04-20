@@ -14,6 +14,7 @@ public class HomeService implements  IPlanComercial{
         contrato.addService(agua);
         contrato.addService(gas);
         contrato.addService(energia);
+
         cliente.setContrato(contrato);
     }
 

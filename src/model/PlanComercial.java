@@ -19,7 +19,6 @@ public class PlanComercial {
     }
 
 
-
     public String getName() {
         return name;
     }
@@ -66,5 +65,16 @@ public class PlanComercial {
 
     public void setCapacityValue(String capacityValue) {
         this.capacityValue = capacityValue;
+    }
+
+    @Override
+    public String toString() {
+        return "PlanComercial" +
+                "name='" + name + '\'' +
+                ", valueToPay=" + valueToPay +
+                ", aditionalConsumeValue=" + aditionalConsumeValue +
+                ", validityRange=" + validityRange +
+                ", services='" + services + '\'' +
+                ", capacityValue='" + capacityValue;
     }
 }
