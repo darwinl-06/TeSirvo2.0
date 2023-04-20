@@ -41,9 +41,10 @@ public class Gas extends Servicio {
 
     @Override
     public String toString() {
-        return "Gas{" +
-                "codigoMedidor='" + codigoMedidor + '\'' +
-                ", contadorActual=" + contadorActual + '\'' +
-                ", contadorAnterior=" + contadorAnterior;
+        return "-----------------------------------" + '\n' +
+                "Gas" + '\n'+
+                "codigoMedidor='" + codigoMedidor + '\n' +
+                "contadorActual=" + contadorActual + '\n' +
+                "contadorAnterior=" + contadorAnterior + '\n';
     }
 }

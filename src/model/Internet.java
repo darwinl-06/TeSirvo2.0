@@ -31,8 +31,9 @@ public class Internet extends Servicio {
 
     @Override
     public String toString() {
-        return "Internet{" +
-                "cantidadConsumoIncluido=" + cantidadConsumoIncluido + '\''+
-                ", cantidadConsumoConsumido=" + cantidadConsumoConsumido;
+        return "-----------------------------------" + '\n' +
+                "Internet" + '\n' +
+                "cantidadConsumoIncluido=" + cantidadConsumoIncluido + '\n'+
+                "cantidadConsumoConsumido=" + cantidadConsumoConsumido + '\n';
     }
 }

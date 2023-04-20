@@ -63,11 +63,12 @@ public class Telefonia extends Servicio {
 
     @Override
     public String toString() {
-        return "Telefonia" +
-                "tipoContrato='" + tipoContrato + '\'' +
-                ", minutosLocalesIncluidos=" + minutosLocalesIncluidos + '\''+
-                ", minutosLocalesConsumidos=" + minutosLocalesConsumidos + '\''+
-                ", minutosLargaDistanciaIncluidos=" + minutosLargaDistanciaIncluidos + '\''+
-                ", minutosLargaDistanciaConsumidos=" + minutosLargaDistanciaConsumidos;
+        return "-----------------------------------" + '\n' +
+                "Telefonia" + '\n' +
+                "tipoContrato='" + tipoContrato + '\n' +
+                "minutosLocalesIncluidos=" + minutosLocalesIncluidos + '\n' +
+                "minutosLocalesConsumidos=" + minutosLocalesConsumidos + '\n' +
+                "minutosLargaDistanciaIncluidos=" + minutosLargaDistanciaIncluidos + '\n'+
+                "minutosLargaDistanciaConsumidos=" + minutosLargaDistanciaConsumidos + '\n';
     }
 }

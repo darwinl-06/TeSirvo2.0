@@ -14,7 +14,7 @@ public class Contrato {
         this.services = new ArrayList<>();
     }
 
-    public String printContrac(){
+    public String printContrato(){
 
 
         String print="";

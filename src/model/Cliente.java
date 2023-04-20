@@ -1,7 +1,5 @@
 package model;
 
-import java.util.List;
-
 public class Cliente {
 
     private String nombre;
@@ -32,7 +30,7 @@ public class Cliente {
         if (contrato==null){
             return "no hay contrato";
         }else
-        return contrato.printContrac();
+        return contrato.printContrato();
     }
     public String getNombre() {
         return nombre;
@@ -108,14 +106,15 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente" +
-                "nombre='" + nombre + '\'' +
-                ", identificacion='" + id + '\'' +
-                ", fechaRegistro='" + fechaRegistro + '\'' +
-                ", codigoContrato='" + codigoContrato + '\'' +
-                ", direccionFacturacion='" + direccionFacturacion + '\'' +
-                ", telefonoContacto='" + telefonoContacto + '\'' +
-                ", email='" + email + '\'' +
-                ", estado=" + estado ;
+        return "-----------------------------------" + '\n' +
+                "Cliente" + '\n' +
+                "nombre='" + nombre + '\n' +
+                "identificacion='" + id + '\n' +
+                "fechaRegistro='" + fechaRegistro + '\n' +
+                "codigoContrato='" + codigoContrato + '\n' +
+                "direccionFacturacion='" + direccionFacturacion + '\n' +
+                "telefonoContacto='" + telefonoContacto + '\n' +
+                "email='" + email + '\n' +
+                "estado=" + estado + '\n';
     }
 }

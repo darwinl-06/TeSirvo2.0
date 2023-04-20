@@ -1,6 +1,6 @@
 package model;
 // Constructor concreto para construir paquetes de servicios
-public class ServicePackageBuilder implements Builder{
+public class ServicePackageBuilder implements Builder {
 
     public ServicePackageBuilder() {}
 

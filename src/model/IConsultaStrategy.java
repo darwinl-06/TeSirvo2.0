@@ -1,6 +1,8 @@
 package model;
 
+import java.util.ArrayList;
+
 public interface IConsultaStrategy {
 
-    void ejecutarConsulta();
+    void ejecutarConsulta(ArrayList<Cliente> cliente);
 }

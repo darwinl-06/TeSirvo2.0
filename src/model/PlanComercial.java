@@ -69,12 +69,13 @@ public class PlanComercial {
 
     @Override
     public String toString() {
-        return "PlanComercial" +
-                "name='" + name + '\'' +
-                ", valueToPay=" + valueToPay +
-                ", aditionalConsumeValue=" + aditionalConsumeValue +
-                ", validityRange=" + validityRange +
-                ", services='" + services + '\'' +
-                ", capacityValue='" + capacityValue;
+        return "-----------------------------------" + '\n' +
+                "PlanComercial"+ '\n' +
+                "name='" + name + '\n' +
+                "valueToPay=" + valueToPay + '\n' +
+                "aditionalConsumeValue=" + aditionalConsumeValue + '\n' +
+                "validityRange=" + validityRange + '\n' +
+                "services='" + services + '\n' +
+                "capacityValue='" + capacityValue + '\n';
     }
 }

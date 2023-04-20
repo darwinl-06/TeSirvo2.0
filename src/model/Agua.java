@@ -38,10 +38,11 @@ public class Agua extends Servicio {
 
     @Override
     public String toString() {
-        return "Agua" +
-                "codigoMedidor='" + codigoMedidor + '\'' +
-                ", contadorActual=" + contadorActual + '\'' +
-                ", contadorAnterior=" + contadorAnterior;
+        return "-----------------------------------" + '\n' +
+                "Agua" + '\n' +
+                "codigoMedidor='" + codigoMedidor + '\n' +
+                "contadorActual=" + contadorActual + '\n' +
+                "contadorAnterior=" + contadorAnterior + '\n';
     }
 
 }

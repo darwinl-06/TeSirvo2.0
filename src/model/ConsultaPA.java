@@ -1,18 +1,14 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ConsultaPA implements IConsultaStrategy {
 
-    public void ejecutarConsulta() {
-
-        ContenedoraGeneral container = new ContenedoraGeneral();
-        List<Cliente> clientes = container.getClients();
+    public void ejecutarConsulta(ArrayList<Cliente> clientes) {
 
         for (Cliente cliente: clientes) {
-            System.out.println("Plan comercial: " + cliente.getNombre());
             System.out.println("Plan comercial: " + cliente.getContrato().getPlan().toString());
         }
-
     }
 }

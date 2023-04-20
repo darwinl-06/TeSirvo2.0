@@ -20,7 +20,7 @@ public class ContenedoraGeneral {
                              String telefonoContacto, String email, EstadoCliente estado) {
 
         Cliente cliente = new Cliente(nombre, identificacion, fechaRegistro, codigoContrato, direccionFacturacion, telefonoContacto, email, estado);
-       clients.add(cliente);
+        clients.add(cliente);
     }
 
     public void createService(String tipoServicio, String id, String codigoContrato, String direccionInstalacion, String fechaInstalacion,
@@ -28,10 +28,9 @@ public class ContenedoraGeneral {
                               TipoPlan tipoContrato, int cantidadConsumoIncluido, int cantidadConsumoConsumido, int minutosLocalesIncluidos, int minutosLocalesConsumidos,
                               int minutosLargaDistanciaIncluidos, int minutosLargaDistanciaConsumidos) {
 
-        Servicio servicio =servicePackageBuilder.construirServicio(tipoServicio, id, codigoContrato, direccionInstalacion, fechaInstalacion,
+        Servicio servicio = servicePackageBuilder.construirServicio(tipoServicio, id, codigoContrato, direccionInstalacion, fechaInstalacion,
                 fechaFacturacion, estado, codigoMedidor, contadorActual, contadorAnterior, tipoContrato, cantidadConsumoIncluido,
                 cantidadConsumoConsumido, minutosLocalesIncluidos, minutosLocalesConsumidos, minutosLargaDistanciaIncluidos, minutosLargaDistanciaConsumidos);
-
 
 
     }

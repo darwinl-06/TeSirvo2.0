@@ -68,12 +68,13 @@ public abstract class Servicio {
 
     @Override
     public String toString() {
-        return "ServicioPublico" +
-                "id='" + id + '\'' +
-                "codigoContrato='" + codigoContrato + '\'' +
-                ", direccionInstalacion='" + direccionInstalacion + '\'' +
-                ", fechaInstalacion='" + fechaInstalacion + '\'' +
-                ", fechaFacturacion='" + fechaFacturacion + '\'' +
-                ", activo=" + estado + '\'';
+        return "-----------------------------------" + '\n' +
+                "Servicio" + '\n' +
+                "id='" + id + '\n' +
+                "codigoContrato='" + codigoContrato + '\n' +
+                "direccionInstalacion='" + direccionInstalacion + '\n' +
+                "fechaInstalacion='" + fechaInstalacion + '\n' +
+                "fechaFacturacion='" + fechaFacturacion + '\n' +
+                "activo=" + estado + '\n';
     }
 }

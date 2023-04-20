@@ -10,13 +10,12 @@ public class HomeConnect implements  IPlanComercial {
         Servicio internet = new Internet("123", "123", cliente.getCodigoContrato(), "12-12-12", "12-12-12", EstadoServicio.ACTIVO, 12, 12);
 
         Contrato contrato = new Contrato("123", planComercial);
+
         contrato.addService(telefonia);
         contrato.addService(internet);
+
         cliente.setContrato(contrato);
 
 
     }
-
-
-
 }
