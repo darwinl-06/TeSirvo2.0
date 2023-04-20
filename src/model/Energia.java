@@ -1,15 +1,15 @@
 package model;
 
-public class Energia extends ServicioPublico {
+public class Energia extends Servicio {
 
     protected String codigoMedidor;
     protected int contadorActual;
     protected int contadorAnterior;
 
-    public Energia(String codigoContrato, String direccionInstalacion, String fechaInstalacion, String fechaFacturacion,
-                   EstadoServicio activo, String codigoMedidor, int contadorActual, int contadorAnterior) {
+    public Energia(String id, String codigoContrato, String direccionInstalacion, String fechaInstalacion,
+                   String fechaFacturacion, EstadoServicio activo, String codigoMedidor, int contadorActual, int contadorAnterior) {
 
-        super(codigoContrato, direccionInstalacion, fechaInstalacion, fechaFacturacion, activo);
+        super(id, codigoContrato, direccionInstalacion, fechaInstalacion, fechaFacturacion, activo);
         this.codigoMedidor = codigoMedidor;
         this.contadorActual = contadorActual;
         this.contadorAnterior = contadorAnterior;
@@ -44,10 +44,9 @@ public class Energia extends ServicioPublico {
 
     @Override
     public String toString() {
-        return "Energia{" +
+        return "Energia" +
                 "codigoMedidor='" + codigoMedidor + '\'' +
-                ", contadorActual=" + contadorActual +
-                ", contadorAnterior=" + contadorAnterior +
-                '}';
+                ", contadorActual=" + contadorActual + '\'' +
+                ", contadorAnterior=" + contadorAnterior;
     }
 }

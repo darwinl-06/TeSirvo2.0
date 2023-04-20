@@ -1,20 +1,29 @@
 package model;
 
-public abstract class ServicioPublico {
+public abstract class Servicio {
 
+    private String id;
     private String codigoContrato;
     private String direccionInstalacion;
     private String fechaInstalacion;
     private String fechaFacturacion;
-    private EstadoServicio activo;
+    private EstadoServicio estado;
 
-    public ServicioPublico(String codigoContrato, String direccionInstalacion, String fechaInstalacion, String fechaFacturacion,
-                           EstadoServicio activo) {
+    public Servicio(String id, String codigoContrato, String direccionInstalacion, String fechaInstalacion, String fechaFacturacion, EstadoServicio activo) {
+        this.id = id;
         this.codigoContrato = codigoContrato;
         this.direccionInstalacion = direccionInstalacion;
         this.fechaInstalacion = fechaInstalacion;
         this.fechaFacturacion = fechaFacturacion;
-        this.activo = activo;
+        this.estado = activo;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
     public ServicioPublico(){
 
@@ -52,13 +61,22 @@ public abstract class ServicioPublico {
         this.fechaFacturacion = fechaFacturacion;
     }
 
-    public EstadoServicio getActivo() {
-        return activo;
+    public EstadoServicio getEstado() {
+        return estado;
     }
 
-    public void setActivo(EstadoServicio activo) {
-        this.activo = activo;
+    public void setEstado(EstadoServicio estado) {
+        this.estado = estado;
     }
 
-
+    @Override
+    public String toString() {
+        return "ServicioPublico" +
+                "id='" + id + '\'' +
+                "codigoContrato='" + codigoContrato + '\'' +
+                ", direccionInstalacion='" + direccionInstalacion + '\'' +
+                ", fechaInstalacion='" + fechaInstalacion + '\'' +
+                ", fechaFacturacion='" + fechaFacturacion + '\'' +
+                ", activo=" + estado + '\'';
+    }
 }

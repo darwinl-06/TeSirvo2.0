@@ -1,30 +1,31 @@
 package model;
 
-public class Telefonia extends ServicioPublico {
+public class Telefonia extends Servicio {
 
-    private String tipoContrato;
+    private TipoPlan tipoContrato;
     private int minutosLocalesIncluidos;
     private int minutosLocalesConsumidos;
     private int minutosLargaDistanciaIncluidos;
     private int minutosLargaDistanciaConsumidos;
 
-    public Telefonia(String codigoContrato, String direccionInstalacion, String fechaInstalacion, String fechaFacturacion, EstadoServicio activo, String tipoContrato, int minutosLocalesIncluidos,
-                     int minutosLocalesConsumidos, int minutosLargaDistanciaIncluidos, int minutosLargaDistanciaConsumidos) {
+    public Telefonia(String id, String codigoContrato, String direccionInstalacion, String fechaInstalacion, String fechaFacturacion, EstadoServicio activo, TipoPlan tipoContrato,
+                     int minutosLocalesIncluidos, int minutosLocalesConsumidos, int minutosLargaDistanciaIncluidos, int minutosLargaDistanciaConsumidos) {
 
-        super(codigoContrato, direccionInstalacion, fechaInstalacion, fechaFacturacion, activo);
+        super(id, codigoContrato, direccionInstalacion, fechaInstalacion, fechaFacturacion, activo);
+
         this.tipoContrato = tipoContrato;
         this.minutosLocalesIncluidos = minutosLocalesIncluidos;
         this.minutosLocalesConsumidos = minutosLocalesConsumidos;
         this.minutosLargaDistanciaIncluidos = minutosLargaDistanciaIncluidos;
         this.minutosLargaDistanciaConsumidos = minutosLargaDistanciaConsumidos;
     }
-    public Telefonia(){}
 
-    public String getTipoContrato() {
+
+    public TipoPlan getTipoContrato() {
         return tipoContrato;
     }
 
-    public void setTipoContrato(String tipoContrato) {
+    public void setTipoContrato(TipoPlan tipoContrato) {
         this.tipoContrato = tipoContrato;
     }
 
@@ -62,12 +63,11 @@ public class Telefonia extends ServicioPublico {
 
     @Override
     public String toString() {
-        return "Telefonia{" +
+        return "Telefonia" +
                 "tipoContrato='" + tipoContrato + '\'' +
-                ", minutosLocalesIncluidos=" + minutosLocalesIncluidos +
-                ", minutosLocalesConsumidos=" + minutosLocalesConsumidos +
-                ", minutosLargaDistanciaIncluidos=" + minutosLargaDistanciaIncluidos +
-                ", minutosLargaDistanciaConsumidos=" + minutosLargaDistanciaConsumidos +
-                '}';
+                ", minutosLocalesIncluidos=" + minutosLocalesIncluidos + '\''+
+                ", minutosLocalesConsumidos=" + minutosLocalesConsumidos + '\''+
+                ", minutosLargaDistanciaIncluidos=" + minutosLargaDistanciaIncluidos + '\''+
+                ", minutosLargaDistanciaConsumidos=" + minutosLargaDistanciaConsumidos;
     }
 }

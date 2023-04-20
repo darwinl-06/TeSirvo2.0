@@ -5,27 +5,27 @@ import java.util.List;
 public class Cliente {
 
     private String nombre;
-    private String identificacion;
+    private String id;
     private String fechaRegistro;
     private String codigoContrato;
     private String direccionFacturacion;
     private String telefonoContacto;
     private String email;
     private EstadoCliente estado;
-    private List<ServicioPublico> serviciosContratados;
+
+    private Contrato contrato;
 
     public Cliente(String nombre, String identificacion, String fechaRegistro, String codigoContrato, String direccionFacturacion,
-                   String telefonoContacto, String email, EstadoCliente estado, List<ServicioPublico> serviciosContratados) {
+                   String telefonoContacto, String email, EstadoCliente estado) {
 
         this.nombre = nombre;
-        this.identificacion = identificacion;
+        this.id = identificacion;
         this.fechaRegistro = fechaRegistro;
         this.codigoContrato = codigoContrato;
         this.direccionFacturacion = direccionFacturacion;
         this.telefonoContacto = telefonoContacto;
         this.email = email;
         this.estado = estado;
-        this.serviciosContratados = serviciosContratados;
     }
 
     public String getNombre() {
@@ -36,12 +36,12 @@ public class Cliente {
         this.nombre = nombre;
     }
 
-    public String getIdentificacion() {
-        return identificacion;
+    public String getId() {
+        return id;
     }
 
-    public void setIdentificacion(String identificacion) {
-        this.identificacion = identificacion;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getFechaRegistro() {
@@ -92,26 +92,25 @@ public class Cliente {
         this.estado = estado;
     }
 
-    public List<ServicioPublico> getServiciosContratados() {
-        return serviciosContratados;
+
+    public Contrato getContrato() {
+        return contrato;
     }
 
-    public void setServiciosContratados(List<ServicioPublico> serviciosContratados) {
-        this.serviciosContratados = serviciosContratados;
+    public void setContrato(Contrato contrato) {
+        this.contrato = contrato;
     }
 
     @Override
     public String toString() {
-        return "Cliente{" +
+        return "Cliente" +
                 "nombre='" + nombre + '\'' +
-                ", identificacion='" + identificacion + '\'' +
+                ", identificacion='" + id + '\'' +
                 ", fechaRegistro='" + fechaRegistro + '\'' +
                 ", codigoContrato='" + codigoContrato + '\'' +
                 ", direccionFacturacion='" + direccionFacturacion + '\'' +
                 ", telefonoContacto='" + telefonoContacto + '\'' +
                 ", email='" + email + '\'' +
-                ", estado=" + estado +
-                ", serviciosContratados=" + serviciosContratados +
-                '}';
+                ", estado=" + estado ;
     }
 }
