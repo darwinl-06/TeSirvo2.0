@@ -2,7 +2,7 @@ package model;
 
 public interface Builder {
 
-    public Servicio buildServicio(
+    public Servicio construirServicio(
 
             String tipoServicio,
             String id,
