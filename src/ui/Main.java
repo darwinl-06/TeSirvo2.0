@@ -49,6 +49,10 @@ public class Main {
         facturador.establecerEstrategia(new ConsultaPA());
         facturador.ejecutarConsulta(controller.getClients());
 
+        System.out.println("-------------------------------------Contratos Creados-------------------------------------");
+        System.out.println(createContratToClient());
+
+
 
     }
 
@@ -94,8 +98,8 @@ public class Main {
         planControler.sellPlancomercial(controller.getClients().get(2),"SuperEnergy");
     }
 
-    public static void createContratToClient(){
-
+    public static String createContratToClient(){
+       return controller.crearContratoToClient("34","HomeService");
     }
 
 }

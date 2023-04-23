@@ -8,24 +8,32 @@ public class ContenedoraGeneral {
     private ServicePackageBuilder servicePackageBuilder;
     private ArrayList<Cliente> clients;
 
+    private PlanContainer planContainer;
+
 
     public ContenedoraGeneral(){
 
         clients = new ArrayList<>();
         servicePackageBuilder = new ServicePackageBuilder();
+        planContainer = new PlanContainer();
     }
 
-    public void crearContratoToClient(String client, String id,PlanComercial plan){
+    public String crearContratoToClient(String client, String id){
+        PlanComercial planComercial;
 
-        Contrato contrato = servicePackageBuilder.construirContrato(id,plan);
+        Contrato contrato = servicePackageBuilder.construirContrato(client,getPlan(id));
 
         for (int i = 0; i < getClients().size(); i++) {
             if(getClients().get(i).getId().equalsIgnoreCase(client)){
                 getClients().get(i).setContrato(contrato);
             }
         }
+        return "Plan Agregado: " + id + " Al cliente " + client;
     }
 
+    public PlanComercial getPlan(String planId) {
+        return planContainer.getPlan(planId);
+    }
 
 
     public void createClient(String nombre, String identificacion, String fechaRegistro, String codigoContrato, String direccionFacturacion,
