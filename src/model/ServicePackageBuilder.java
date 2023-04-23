@@ -12,4 +12,9 @@ public class ServicePackageBuilder implements Builder {
                 cantidadConsumoConsumido, minutosLocalesIncluidos, minutosLocalesConsumidos, minutosLargaDistanciaIncluidos, minutosLargaDistanciaConsumidos);
 
     }
+
+    @Override
+    public Contrato construirContrato(String id, PlanComercial plan) {
+        return new Contrato(id, plan);
+    }
 }

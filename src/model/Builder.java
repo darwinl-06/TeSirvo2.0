@@ -22,4 +22,6 @@ public interface Builder {
             int minutosLargaDistanciaIncluidos,
             int minutosLargaDistanciaConsumidos
     );
+
+    public Contrato construirContrato (String id, PlanComercial plan);
 }

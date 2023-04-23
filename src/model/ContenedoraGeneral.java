@@ -5,7 +5,6 @@ import java.util.List;
 
 public class ContenedoraGeneral {
 
-
     private ServicePackageBuilder servicePackageBuilder;
     private ArrayList<Cliente> clients;
 
@@ -16,12 +15,27 @@ public class ContenedoraGeneral {
         servicePackageBuilder = new ServicePackageBuilder();
     }
 
+    public void crearContratoToClient(String client, String id,PlanComercial plan){
+
+        Contrato contrato = servicePackageBuilder.construirContrato(id,plan);
+
+        for (int i = 0; i < getClients().size(); i++) {
+            if(getClients().get(i).getId().equalsIgnoreCase(client)){
+                getClients().get(i).setContrato(contrato);
+            }
+        }
+    }
+
+
+
     public void createClient(String nombre, String identificacion, String fechaRegistro, String codigoContrato, String direccionFacturacion,
                              String telefonoContacto, String email, EstadoCliente estado) {
 
         Cliente cliente = new Cliente(nombre, identificacion, fechaRegistro, codigoContrato, direccionFacturacion, telefonoContacto, email, estado);
         clients.add(cliente);
     }
+
+
 
     public void createService(String tipoServicio, String id, String codigoContrato, String direccionInstalacion, String fechaInstalacion,
                               String fechaFacturacion, EstadoServicio estado, String codigoMedidor, int contadorActual, int contadorAnterior,

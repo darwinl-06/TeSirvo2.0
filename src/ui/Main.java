@@ -94,4 +94,8 @@ public class Main {
         planControler.sellPlancomercial(controller.getClients().get(2),"SuperEnergy");
     }
 
+    public static void createContratToClient(){
+
+    }
+
 }
